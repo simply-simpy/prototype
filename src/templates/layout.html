@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ SiteName }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{{ mainCss }}">
+
+</head>
+<body class="no-js ">
+{% include "../templates/partials/header.html" %}
+<main class="main" role="main">
+    {% block content %}{% endblock %}
+</main>
+{% include "../templates/partials/footer.html" %}
+<script src="js/vendor/jquery-3.1.0.js"></script>
+<script src="js/vendor/bootstrap.js"></script>
+<script src="js/vendor/mobile-detect.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

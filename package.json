@@ -1,0 +1,30 @@
+{
+  "name": "prototype",
+  "version": "alpha_1.0.0",
+  "description": "HTML prototype environment with Mongo, Express, Nunjucks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simply-simpy/prototype.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "prototype"
+  ],
+  "author": "@simply_simpy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simply-simpy/prototype/issues"
+  },
+  "homepage": "https://github.com/simply-simpy/prototype#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.5",
+    "express": "^4.14.0",
+    "express-nunjucks": "^2.0.1",
+    "nunjucks": "^3.0.0"
+  }
+}
