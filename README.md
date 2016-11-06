@@ -1,7 +1,7 @@
 # prototype
-Node/Express/Mongo/Nunjucks prototype environment
-Currently in Progress
-To run: (requires Node.js local installation)
+Node/Express/Mongo/Nunjucks prototype environment<br>
+Currently in Progress<br>
+To run: (requires Node.js local installation)<br>
 
 1. Open terminal, CD ~/sites
 2. mkdir new-site
@@ -9,5 +9,7 @@ To run: (requires Node.js local installation)
 4. NPM install
 5. node index.js
 
+
+6. Browse to http://localhost:3000/
 
 
