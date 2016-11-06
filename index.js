@@ -18,21 +18,18 @@ const njk = expressNunjucks(app, {
 //console.log(njk.env ) nunjucks environoment
 // db connection
 
-var MongoClient = require('mongodb').MongoClient;
 
-MongoClient.connect('mongodb://localhost:27017/prototype', function (err, db) {
-    if (err) throw err;
-
-    db.collection('heroes').find().toArray(function (err, result) {
-        if (err) throw err;
-
-        console.log(result)
-    })
-});
 
 // add pages here
 app.get('/', (req, res) => {
-    res.render('pages/index');
+    var MongoClient = require('mongodb').MongoClient;
+    MongoClient.connect('mongodb://localhost:27017/prototype', function (err, db) {
+        if (err) throw err;
+        db.collection('heroes').find().toArray(function (err, result) {
+            if (err) throw err;
+            res.render('pages/index', { result } );
+        })
+    });
 });
 
 app.get('/contact', (req, res) => {
@@ -40,8 +37,8 @@ app.get('/contact', (req, res) => {
         firstName: 'Simon',
         lastName: 'LeBon'
     };
-    //simple data render example
-    res.render('pages/contact', { data } );
+    // simple data render example
+    res.render('pages/contact', {data});
     //http://expressjs.com/en/api.html#res.render
 });
 

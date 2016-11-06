@@ -13,3 +13,4 @@ To run: (requires Node.js local installation)<br>
 6. Browse to http://localhost:3000/
 
 
+* Requires Mongo DB setup and test content

@@ -1,6 +1,6 @@
 {
   "name": "prototype",
-  "version": "alpha_1.0.0",
+  "version": ".1.0.0",
   "description": "HTML prototype environment with Mongo, Express, Nunjucks.",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,7 @@
     "bootstrap": "^4.0.0-alpha.5",
     "express": "^4.14.0",
     "express-nunjucks": "^2.0.1",
+    "jquery": "^3.1.1",
     "mongodb": "^2.2.11",
     "nunjucks": "^3.0.0"
   }
