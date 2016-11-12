@@ -2,8 +2,6 @@
 // https://github.com/pkolt/express-nunjucks/blob/master/README.md
 //https://medium.com/@andy.neale/nunjucks-a-javascript-template-engine-7731d23eb8cc#.9l7l0oi2t
 const express = require('express');
-
-
 const expressNunjucks = require('express-nunjucks');
 const app = express();
 const isDev = app.get('env') === 'development';
@@ -14,11 +12,20 @@ const njk = expressNunjucks(app, {
     watch: isDev,
     noCache: isDev
 });
+var env = new nunjucks.Environment(AsyncLoaderFromDatabase, opts);
 
 //console.log(njk.env ) nunjucks environoment
 // db connection
 
-
+// browsersync
+if (app.get('env') == 'development') {
+    var browserSync = require('browser-sync');
+    var bs = browserSync({
+        logSnippet: false,
+        files: ["**/css/main.css", "**/js/**/*.js"]
+    });
+    app.use(require('connect-browser-sync')(bs));
+}
 
 // add pages here
 app.get('/', (req, res) => {
@@ -42,7 +49,9 @@ app.get('/contact', (req, res) => {
     //http://expressjs.com/en/api.html#res.render
 });
 
+// makes static files available
+app.use(express.static('public'));
 
 // end add pages
 
-app.listen(3000);
+app.listen(8080);

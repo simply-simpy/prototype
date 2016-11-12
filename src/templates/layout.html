@@ -6,7 +6,7 @@
     <title>{{ SiteName }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="{{ mainCss }}">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body class="no-js ">
@@ -15,9 +15,13 @@
     {% block content %}{% endblock %}
 </main>
 {% include "../templates/partials/footer.html" %}
-<script src="js/vendor/jquery-3.1.0.js"></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/jquery.validate.js"></script>
+<script src="js/vendor/tether.js"></script>
 <script src="js/vendor/bootstrap.js"></script>
 <script src="js/vendor/mobile-detect.js"></script>
+<script src="js/vendor/picturefill.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
