@@ -5,3 +5,8 @@ const fullNames2 = names.map((name) => {
 });
 
 console.log(fullNames2);
+
+var names2 = names.map(name => `${name} bose`);
+console.log(names2)
+
+

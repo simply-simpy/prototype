@@ -12,7 +12,7 @@ const njk = expressNunjucks(app, {
     watch: isDev,
     noCache: isDev
 });
-var env = new nunjucks.Environment(AsyncLoaderFromDatabase, opts);
+//var env = new nunjucks.Environment(AsyncLoaderFromDatabase, opts);
 
 //console.log(njk.env ) nunjucks environoment
 // db connection
