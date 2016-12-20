@@ -1,4 +1,4 @@
-
+// http://stackoverflow.com/questions/41213473/data-from-mongo-in-gulp-using-gulp-data/41252460#41252460
 // https://github.com/pkolt/express-nunjucks/blob/master/README.md
 //https://medium.com/@andy.neale/nunjucks-a-javascript-template-engine-7731d23eb8cc#.9l7l0oi2t
 const express = require('express');
@@ -17,7 +17,7 @@ const njk = expressNunjucks(app, {
 //console.log(njk.env ) nunjucks environoment
 // db connection
 
-// browsersync
+// browsersyncf
 if (app.get('env') == 'development') {
     var browserSync = require('browser-sync');
     var bs = browserSync({
